@@ -761,16 +761,16 @@ void pnga_print_patch_file(file, g_a, lo, hi, pretty)
                             if(ndim > 1)
                                 for(j=0; j<(hip[1]-lop[1]+1); j++)
                                     if((double)dbuf_2d[j*bufsize+i]<100000.0)
-                                        fprintf(file," %11.7f",
+                                        fprintf(file," %12.8f",
                                                 dbuf_2d[j*bufsize+i]);
                                     else
-                                        fprintf(file," %.7e",
+                                        fprintf(file," %.8e",
                                                 dbuf_2d[j*bufsize+i]);
                             else
                                 if((double)dbuf_2d[i]<100000.0)
-                                    fprintf(file," %11.7f",dbuf_2d[i]);
+                                    fprintf(file," %12.8f",dbuf_2d[i]);
                                 else
-                                    fprintf(file," %.7e",dbuf_2d[i]);
+                                    fprintf(file," %.8e",dbuf_2d[i]);
                             break;
                         case C_FLOAT:
                             if(ndim > 1)
